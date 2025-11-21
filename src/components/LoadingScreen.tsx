@@ -10,13 +10,13 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
   const [progress, setProgress] = useState(0);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-  // Brand colors
+  // E2B Official Brand Colors
   const brandColors = [
-    "#E10500", // Red
-    "#FA500F", // Orange Dark
-    "#FF8205", // Orange
-    "#FFAF00", // Orange Light
-    "#FFD800", // Yellow
+    "#0A0A1F", // E2B Dark
+    "#16213e", // E2B Navy
+    "#0066FF", // E2B Blue
+    "#7D4CDB", // E2B Purple
+    "#00D4FF", // E2B Cyan
   ];
 
 
@@ -121,16 +121,16 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           </h1>
         </div>
 
-        {/* Animated GIF */}
+        {/* Animated GIF - E2B Style */}
         <div
           style={{
             marginBottom: "60px",
             padding: "20px",
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backgroundColor: "rgba(10, 10, 31, 0.8)",
             borderRadius: "20px",
-            border: "2px solid rgba(255, 255, 255, 0.2)",
+            border: "2px solid #00D4FF",
             backdropFilter: "blur(10px)",
-            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+            boxShadow: "0 0 30px rgba(0, 212, 255, 0.6)",
           }}
         >
           <img
@@ -159,17 +159,17 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
             boxShadow: "inset 0 2px 4px rgba(0,0,0,0.3)",
           }}
         >
-          {/* Loading Bar */}
+          {/* Loading Bar - E2B Theme */}
           <div
             style={{
               width: `${progress}%`,
               height: "100%",
               background:
-                "linear-gradient(90deg, #FFD800, #FFAF00, #FF8205, #FA500F, #E10500)",
+                "linear-gradient(90deg, #0066FF, #7D4CDB, #00D4FF)",
               borderRadius: "8px",
               transition: "width 0.02s linear",
               position: "relative",
-              boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
+              boxShadow: "0 0 20px rgba(0, 212, 255, 0.8)",
             }}
           >
             {/* Shine effect */}
