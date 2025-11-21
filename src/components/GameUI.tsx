@@ -22,13 +22,13 @@ export const GameUI: React.FC<GameUIProps> = ({
         margin: 0,
         padding: 0,
         overflow: "hidden",
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // Full-screen gradient background
+        // E2B Official Brand Theme - Cyber Fleet
         background:
-          "linear-gradient(180deg, #FFD800 0%, #FFAF00 25%, #FF8205 50%, #FA500F 75%, #E10500 100%)",
+          "linear-gradient(135deg, #0A0A1F 0%, #16213e 50%, #0f172a 100%)",
       }}
     >
       {/* Game Container - centered with mobile max width */}
@@ -44,6 +44,29 @@ export const GameUI: React.FC<GameUIProps> = ({
       >
         {/* Game Canvas */}
         {children}
+      </div>
+
+      {/* E2B Branding Badge */}
+      <div
+        style={{
+          position: "absolute",
+          top: "20px",
+          right: "20px",
+          padding: "8px 16px",
+          borderRadius: "8px",
+          backgroundColor: "rgba(10, 10, 31, 0.9)",
+          border: "1px solid #0066FF",
+          boxShadow: "0 0 20px rgba(0, 102, 255, 0.5)",
+          fontSize: "12px",
+          color: "#00D4FF",
+          textShadow: "0 0 10px #00D4FF",
+          fontWeight: "600",
+          letterSpacing: "0.5px",
+          zIndex: 10,
+          pointerEvents: "none",
+        }}
+      >
+        ⚡ Powered by E2B
       </div>
 
       {/* UI Overlay */}
@@ -66,10 +89,10 @@ export const GameUI: React.FC<GameUIProps> = ({
           style={{
             padding: "10px 20px",
             borderRadius: "15px",
-            backgroundColor: "rgba(255, 255, 255, 0.15)",
+            backgroundColor: "rgba(10, 10, 31, 0.9)",
             backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+            border: "1px solid #7D4CDB",
+            boxShadow: "0 0 25px rgba(0, 102, 255, 0.6)",
             textAlign: "center",
             marginBottom: "15px",
             width: "100%",
@@ -108,10 +131,9 @@ export const GameUI: React.FC<GameUIProps> = ({
             style={{
               fontSize: "14px",
               fontWeight: "600",
-              color: "#fff",
+              color: "#00D4FF",
               fontFamily: "'Press Start 2P', 'Courier New', monospace",
-              textShadow:
-                "1px 1px 0px rgba(0,0,0,0.8), 2px 2px 0px rgba(0,0,0,0.3)",
+              textShadow: "0 0 15px #00D4FF",
               letterSpacing: "1px",
               imageRendering: "pixelated",
               textRendering: "geometricPrecision",
@@ -126,12 +148,12 @@ export const GameUI: React.FC<GameUIProps> = ({
           style={{
             padding: "8px 16px",
             borderRadius: "10px",
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            backgroundColor: "rgba(10, 10, 31, 0.8)",
             backdropFilter: "blur(8px)",
-            border: "1px solid rgba(255, 255, 255, 0.15)",
+            border: "1px solid #7D4CDB",
             fontSize: "12px",
-            color: "#fff",
-            textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
+            color: "#00D4FF",
+            textShadow: "0 0 10px #00D4FF",
             textAlign: "center",
             fontWeight: "500",
           }}
@@ -162,11 +184,11 @@ export const GameUI: React.FC<GameUIProps> = ({
             style={{
               textAlign: "center",
               padding: "30px",
-              backgroundColor: "rgba(255, 255, 255, 0.15)",
+              backgroundColor: "rgba(10, 10, 31, 0.95)",
               backdropFilter: "blur(20px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              border: "2px solid #0066FF",
               borderRadius: "15px",
-              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0 0 40px rgba(0, 102, 255, 0.8)",
               maxWidth: "350px",
               width: "min(350px, calc(100vw - 40px))",
             }}
@@ -195,14 +217,14 @@ export const GameUI: React.FC<GameUIProps> = ({
               style={{
                 margin: "0 0 25px 0",
                 padding: "12px 20px",
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backgroundColor: "rgba(10, 10, 31, 0.8)",
                 backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255, 255, 255, 0.15)",
+                border: "1px solid #7D4CDB",
                 borderRadius: "10px",
                 fontSize: "16px",
-                color: "#fff",
+                color: "#00D4FF",
                 fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
+                textShadow: "0 0 15px #00D4FF",
                 letterSpacing: "1px",
                 imageRendering: "pixelated",
                 textRendering: "geometricPrecision",
@@ -215,17 +237,17 @@ export const GameUI: React.FC<GameUIProps> = ({
             <button
               onClick={onRestart}
               style={{
-                padding: "12px 24px",
+                padding: "12px 32px",
                 fontSize: "14px",
                 fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                backgroundColor: "rgba(76, 175, 80, 0.8)",
+                background: "linear-gradient(45deg, #0066FF, #7D4CDB)",
                 backdropFilter: "blur(10px)",
                 color: "white",
-                border: "1px solid rgba(255, 255, 255, 0.3)",
+                border: "2px solid #00D4FF",
                 borderRadius: "8px",
                 cursor: "pointer",
-                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
-                transition: "all 0.2s ease",
+                boxShadow: "0 0 25px rgba(0, 212, 255, 0.6)",
+                transition: "all 0.3s ease",
                 textTransform: "uppercase",
                 letterSpacing: "1px",
                 imageRendering: "pixelated",
@@ -233,24 +255,24 @@ export const GameUI: React.FC<GameUIProps> = ({
                 textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(69, 160, 73, 0.9)";
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.3)";
+                e.currentTarget.style.background =
+                  "linear-gradient(45deg, #7D4CDB, #9d4edd)";
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 0 50px rgba(0, 212, 255, 0.9)";
               }}
               onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(76, 175, 80, 0.8)";
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+                e.currentTarget.style.background =
+                  "linear-gradient(45deg, #0066FF, #7D4CDB)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "0 0 25px rgba(0, 212, 255, 0.6)";
               }}
               onMouseDown={(e) => {
-                e.currentTarget.style.transform = "translateY(0px)";
-                e.currentTarget.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(0px) scale(0.98)";
+                e.currentTarget.style.boxShadow = "0 0 15px rgba(0, 212, 255, 0.5)";
               }}
               onMouseUp={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.3)";
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 0 50px rgba(0, 212, 255, 0.9)";
               }}
             >
               Play Again
