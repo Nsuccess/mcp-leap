@@ -113,33 +113,33 @@ export const GameUI: React.FC<GameUIProps> = ({
             <h1
               style={{
                 margin: "0",
-                color: "#fff",
-                fontSize: "24px",
-                fontWeight: "bold",
-                fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                textShadow:
-                  "2px 2px 0px rgba(0,0,0,0.8), 4px 4px 0px rgba(0,0,0,0.3)",
-                letterSpacing: "2px",
-                imageRendering: "pixelated",
-                textRendering: "geometricPrecision",
+                background: "linear-gradient(135deg, #0066FF, #00D4FF)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                fontSize: "clamp(20px, 5vw, 28px)",
+                fontWeight: "900",
+                fontFamily: "'Orbitron', 'Rajdhani', sans-serif",
+                filter: "drop-shadow(0 0 15px rgba(0, 212, 255, 0.8))",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
               }}
             >
-              Jump
+              JUMP
             </h1>
           </div>
           <div
             style={{
-              fontSize: "14px",
-              fontWeight: "600",
+              fontSize: "clamp(14px, 3.5vw, 18px)",
+              fontWeight: "700",
               color: "#00D4FF",
-              fontFamily: "'Press Start 2P', 'Courier New', monospace",
-              textShadow: "0 0 15px #00D4FF",
-              letterSpacing: "1px",
-              imageRendering: "pixelated",
-              textRendering: "geometricPrecision",
+              fontFamily: "'Rajdhani', 'Exo 2', sans-serif",
+              textShadow: "0 0 20px rgba(0, 212, 255, 0.9), 0 0 40px rgba(0, 102, 255, 0.5)",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
             }}
           >
-            Score: {score}
+            <span style={{ color: "#7D4CDB", fontSize: "0.85em" }}>SCORE</span> {score}
           </div>
         </div>
 
