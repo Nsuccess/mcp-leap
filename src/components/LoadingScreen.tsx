@@ -118,13 +118,14 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
               backgroundClip: "text",
               backgroundSize: "200% 200%",
               animation: "gradientShift 3s ease infinite",
-              fontSize: "clamp(32px, 8vw, 64px)",
+              fontSize: "clamp(28px, 7vw, 56px)",
               fontWeight: "900",
               fontFamily: "'Orbitron', 'Rajdhani', 'Exo 2', sans-serif",
               filter: "drop-shadow(0 0 40px rgba(0, 212, 255, 0.9)) drop-shadow(0 0 80px rgba(0, 102, 255, 0.5))",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               position: "relative",
+              whiteSpace: "nowrap",
             }}
           >
             <style>{`
@@ -141,9 +142,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
                 100% { transform: translateY(100vh); }
               }
             `}</style>
-            E2B FLEET
-            <br />
-            <span style={{ fontSize: "0.7em", letterSpacing: "0.3em" }}>JUMP</span>
+            E2B FLEETJUMP
           </h1>
           <div
             style={{
