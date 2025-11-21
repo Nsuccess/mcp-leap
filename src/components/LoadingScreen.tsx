@@ -10,17 +10,6 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
   const [progress, setProgress] = useState(0);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-  // E2B Official Brand Colors
-  const brandColors = [
-    "#0A0A1F", // E2B Dark
-    "#16213e", // E2B Navy
-    "#0066FF", // E2B Blue
-    "#7D4CDB", // E2B Purple
-    "#00D4FF", // E2B Cyan
-  ];
-
-
-
   useEffect(() => {
     // Animate progress bar over 2 seconds
     const duration = 2000; // 2 seconds
