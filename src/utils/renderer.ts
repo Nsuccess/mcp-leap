@@ -13,25 +13,25 @@ export class Renderer {
     const canvasWidth = this.ctx.canvas.width;
     const canvasHeight = this.ctx.canvas.height;
 
-    // Create static gradient background with brand colors
+    // Create E2B cyber space gradient background
     const gradient = this.ctx.createLinearGradient(0, 0, 0, canvasHeight);
 
-    // Brand colors array for gradient (from yellow to red)
+    // E2B Official Brand Colors - Cyber Fleet Theme
     const colors = [
-      GAME_CONFIG.BRAND_COLORS.YELLOW,
-      GAME_CONFIG.BRAND_COLORS.ORANGE_LIGHT,
-      GAME_CONFIG.BRAND_COLORS.ORANGE,
-      GAME_CONFIG.BRAND_COLORS.ORANGE_DARK,
-      GAME_CONFIG.BRAND_COLORS.RED,
+      GAME_CONFIG.BRAND_COLORS.DARK,    // Deep space
+      GAME_CONFIG.BRAND_COLORS.NAVY,    // Navy blue
+      GAME_CONFIG.BRAND_COLORS.BLUE,    // E2B Blue
+      GAME_CONFIG.BRAND_COLORS.PURPLE,  // E2B Purple
+      GAME_CONFIG.BRAND_COLORS.CYAN,    // E2B Cyan glow
     ];
 
-    // Create smooth horizontal bands (static positioning)
+    // Create smooth E2B gradient
     for (let i = 0; i < colors.length; i++) {
       const position = i / (colors.length - 1);
       gradient.addColorStop(position, colors[i]);
     }
 
-    // Apply gradient background
+    // Apply E2B gradient background
     this.ctx.fillStyle = gradient;
     this.ctx.fillRect(0, 0, canvasWidth, canvasHeight);
   }
@@ -68,31 +68,30 @@ export class Renderer {
     this.drawRoundedRect(x + 3, y + 3, width, height, 8);
     this.ctx.fill();
 
-    // Create gradient for platform
+    // Create E2B electric gradient for platform
     const gradient = this.ctx.createLinearGradient(x, y, x, y + height);
-    gradient.addColorStop(0, "#8B4513"); // Lighter brown top
-    gradient.addColorStop(0.3, "#654321"); // Medium brown
-    gradient.addColorStop(0.7, "#4A2C17"); // Darker brown
-    gradient.addColorStop(1, "#2C1810"); // Darkest brown bottom
+    gradient.addColorStop(0, "#0066FF"); // E2B Blue top
+    gradient.addColorStop(0.5, "#7D4CDB"); // E2B Purple middle
+    gradient.addColorStop(1, "#0A0A1F"); // E2B Dark bottom
 
-    // Draw main platform with gradient
+    // Draw main platform with E2B gradient
     this.ctx.fillStyle = gradient;
     this.drawRoundedRect(x, y, width, height, 8);
     this.ctx.fill();
 
-    // Add highlight on top edge
-    this.ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+    // Add cyan glow on top edge
+    this.ctx.fillStyle = "rgba(0, 212, 255, 0.3)";
     this.drawRoundedRect(x, y, width, height * 0.3, 8);
     this.ctx.fill();
 
-    // Add subtle inner glow
-    this.ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
-    this.ctx.lineWidth = 1;
-    this.drawRoundedRect(x + 0.5, y + 0.5, width - 1, height - 1, 7);
+    // Add E2B cyan border glow
+    this.ctx.strokeStyle = "rgba(0, 212, 255, 0.6)";
+    this.ctx.lineWidth = 2;
+    this.drawRoundedRect(x + 1, y + 1, width - 2, height - 2, 7);
     this.ctx.stroke();
 
-    // Add texture dots for grip
-    this.ctx.fillStyle = "rgba(255, 255, 255, 0.15)";
+    // Add E2B tech dots
+    this.ctx.fillStyle = "rgba(0, 212, 255, 0.8)";
     const dotSpacing = 12;
     const dotsPerRow = Math.floor(width / dotSpacing);
     const startX = x + (width - (dotsPerRow - 1) * dotSpacing) / 2;

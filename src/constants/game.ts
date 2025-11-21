@@ -27,17 +27,17 @@ export const GAME_CONFIG = {
   GAME_OVER_OFFSET: 50, // Reduced offset for faster game over detection
   SCORE_MULTIPLIER: 10,
 
-  // Visual - Brand Colors
+  // Visual - E2B Official Brand Colors
   BRAND_COLORS: {
-    YELLOW: "#FFD800",
-    ORANGE_LIGHT: "#FFAF00",
-    ORANGE: "#FF8205",
-    ORANGE_DARK: "#FA500F",
-    RED: "#E10500",
+    DARK: "#0A0A1F",      // E2B Dark
+    NAVY: "#16213e",      // E2B Navy
+    BLUE: "#0066FF",      // E2B Blue
+    PURPLE: "#7D4CDB",    // E2B Purple
+    CYAN: "#00D4FF",      // E2B Cyan
   },
-  BACKGROUND_COLOR: "#87CEEB", // Fallback color
-  PLATFORM_COLOR: "#2C1810", // Dark brown
-  FALLBACK_PLAYER_COLOR: "#FF6B6B",
+  BACKGROUND_COLOR: "#0A0A1F", // E2B Dark
+  PLATFORM_COLOR: "#0066FF", // E2B Blue
+  FALLBACK_PLAYER_COLOR: "#00D4FF", // E2B Cyan
 
   // Animation (keeping for future use if needed)
   GRADIENT_ANIMATION_SPEED: 0.0008,
