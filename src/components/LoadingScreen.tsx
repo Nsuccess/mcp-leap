@@ -61,23 +61,9 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
         transform: isAnimatingOut ? "translateY(-100vh)" : "translateY(0)",
         opacity: isAnimatingOut ? 0 : 1,
         transition: "all 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
+        background: "linear-gradient(135deg, #0A0A1F 0%, #16213e 50%, #0F172A 100%)",
       }}
     >
-      {/* Background color stripes */}
-      {brandColors.map((color) => (
-        <div
-          key={color}
-          style={{
-            width: "20%",
-            height: "100%",
-            backgroundColor: color,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        />
-      ))}
-
       {/* Content overlay */}
       <div
         style={{
@@ -90,32 +76,32 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "rgba(0, 0, 0, 0.2)", // Slight overlay for better contrast
         }}
       >
-        {/* E2B Logo and Title */}
+        {/* E2B Logo and Title - High Contrast */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "15px",
-            marginBottom: "40px",
+            gap: "20px",
+            marginBottom: "50px",
           }}
         >
           <h1
             style={{
               margin: 0,
-              color: "#0066FF",
-              fontSize: "48px",
+              background: "linear-gradient(90deg, #0066FF 0%, #7D4CDB 50%, #00D4FF 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              fontSize: "56px",
               fontWeight: "bold",
               fontFamily: "'Press Start 2P', 'Courier New', monospace",
-              textShadow:
-                "0 0 20px #00D4FF, 0 0 40px #0066FF",
-              letterSpacing: "4px",
+              filter: "drop-shadow(0 0 30px rgba(0, 212, 255, 0.8))",
+              letterSpacing: "6px",
               imageRendering: "pixelated",
               textRendering: "geometricPrecision",
-              animation: "pulse 2s ease-in-out infinite",
             }}
           >
             E2B FLEETJUMP
@@ -123,27 +109,26 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           <div
             style={{
               color: "#00D4FF",
-              fontSize: "14px",
-              fontFamily: "'Press Start 2P', 'Courier New', monospace",
-              textShadow: "0 0 10px #00D4FF",
+              fontSize: "16px",
+              fontWeight: "600",
+              textShadow: "0 0 15px #00D4FF, 0 0 30px #0066FF",
               letterSpacing: "2px",
-              opacity: 0.9,
             }}
           >
             ⚡ Powered by E2B Sandboxes
           </div>
         </div>
 
-        {/* Animated GIF - E2B Style */}
+        {/* Animated GIF - E2B Style with Glow */}
         <div
           style={{
             marginBottom: "60px",
             padding: "20px",
-            backgroundColor: "rgba(10, 10, 31, 0.8)",
+            backgroundColor: "rgba(0, 102, 255, 0.1)",
             borderRadius: "20px",
             border: "2px solid #00D4FF",
             backdropFilter: "blur(10px)",
-            boxShadow: "0 0 30px rgba(0, 212, 255, 0.6)",
+            boxShadow: "0 0 40px rgba(0, 212, 255, 0.8)",
           }}
         >
           <img
@@ -154,22 +139,23 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
               height: "120px",
               imageRendering: "pixelated",
               borderRadius: "10px",
+              filter: "drop-shadow(0 0 20px #00D4FF) brightness(1.2)",
             }}
           />
         </div>
 
-        {/* Loading Bar Container */}
+        {/* Loading Bar Container - Clean E2B Style */}
         <div
           style={{
             width: "400px",
             maxWidth: "80vw",
-            height: "20px",
-            backgroundColor: "rgba(0, 0, 0, 0.3)",
-            borderRadius: "10px",
-            border: "2px solid rgba(255, 255, 255, 0.3)",
+            height: "24px",
+            backgroundColor: "rgba(15, 23, 42, 0.8)",
+            borderRadius: "12px",
+            border: "2px solid rgba(0, 102, 255, 0.5)",
             overflow: "hidden",
             position: "relative",
-            boxShadow: "inset 0 2px 4px rgba(0,0,0,0.3)",
+            boxShadow: "0 0 20px rgba(0, 102, 255, 0.3)",
           }}
         >
           {/* Loading Bar - E2B Theme */}
@@ -201,14 +187,14 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           </div>
         </div>
 
-        {/* Loading Text */}
+        {/* Loading Text - Bright and Readable */}
         <div
           style={{
             marginTop: "30px",
-            color: "#fff",
-            fontSize: "16px",
-            fontFamily: "'Press Start 2P', 'Courier New', monospace",
-            textShadow: "2px 2px 0px rgba(0,0,0,0.8)",
+            color: "#00D4FF",
+            fontSize: "20px",
+            fontWeight: "300",
+            textShadow: "0 0 15px #00D4FF",
             letterSpacing: "2px",
             textAlign: "center",
           }}
