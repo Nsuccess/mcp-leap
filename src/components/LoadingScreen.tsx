@@ -93,32 +93,45 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           backgroundColor: "rgba(0, 0, 0, 0.2)", // Slight overlay for better contrast
         }}
       >
-        {/* Logo and Title */}
+        {/* E2B Logo and Title */}
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
-            gap: "20px",
+            gap: "15px",
             marginBottom: "40px",
           }}
         >
-          <span style={{ fontSize: "80px" }}>🎮</span>
           <h1
             style={{
               margin: 0,
-              color: "#fff",
+              color: "#0066FF",
               fontSize: "48px",
               fontWeight: "bold",
               fontFamily: "'Press Start 2P', 'Courier New', monospace",
               textShadow:
-                "3px 3px 0px rgba(0,0,0,0.8), 6px 6px 0px rgba(0,0,0,0.3)",
-              letterSpacing: "3px",
+                "0 0 20px #00D4FF, 0 0 40px #0066FF",
+              letterSpacing: "4px",
               imageRendering: "pixelated",
               textRendering: "geometricPrecision",
+              animation: "pulse 2s ease-in-out infinite",
             }}
           >
-            Jump
+            E2B FLEETJUMP
           </h1>
+          <div
+            style={{
+              color: "#00D4FF",
+              fontSize: "14px",
+              fontFamily: "'Press Start 2P', 'Courier New', monospace",
+              textShadow: "0 0 10px #00D4FF",
+              letterSpacing: "2px",
+              opacity: 0.9,
+            }}
+          >
+            ⚡ Powered by E2B Sandboxes
+          </div>
         </div>
 
         {/* Animated GIF - E2B Style */}
@@ -203,19 +216,20 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           Loading... {Math.round(progress)}%
         </div>
 
-        {/* Subtitle */}
+        {/* E2B Subtitle */}
         <div
           style={{
             marginTop: "15px",
-            color: "rgba(255, 255, 255, 0.8)",
+            color: "#00D4FF",
             fontSize: "12px",
             fontFamily: "'Press Start 2P', 'Courier New', monospace",
-            textShadow: "1px 1px 0px rgba(0,0,0,0.8)",
+            textShadow: "0 0 10px #00D4FF",
             letterSpacing: "1px",
             textAlign: "center",
+            opacity: 0.8,
           }}
         >
-          Preparing your adventure...
+          Preparing your sandbox fleet...
         </div>
       </div>
     </div>
