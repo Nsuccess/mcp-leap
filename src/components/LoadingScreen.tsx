@@ -99,7 +99,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           justifyContent: "center",
         }}
       >
-        {/* E2B Logo and Title - High Contrast */}
+        {/* Blaxel Logo and Title - High Contrast */}
         <div
           style={{
             display: "flex",
@@ -142,7 +142,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
                 100% { transform: translateY(100vh); }
               }
             `}</style>
-            E2B FLEETJUMP
+            BLAXEL FLEETJUMP
           </h1>
           <div
             style={{
@@ -150,14 +150,18 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
               fontSize: "clamp(12px, 3vw, 18px)",
               fontWeight: "300",
               fontFamily: "'Rajdhani', 'Exo 2', sans-serif",
-              textShadow: "0 0 20px rgba(0, 212, 255, 0.8)",
+              textShadow: "0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.4)",
               letterSpacing: "0.25em",
               textTransform: "uppercase",
               animation: "float 3s ease-in-out infinite",
+              padding: "8px 16px",
+              borderRadius: "8px",
+              border: "1px solid rgba(0, 212, 255, 0.3)",
+              background: "linear-gradient(135deg, rgba(22, 33, 62, 0.6), rgba(10, 10, 31, 0.8))",
             }}
           >
             <span style={{ fontSize: "1.5em", marginRight: "8px" }}>⚡</span>
-            Powered by E2B Sandboxes
+            Powered by Blaxel Sandboxes
           </div>
         </div>
 
@@ -199,7 +203,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           />
         </div>
 
-        {/* Loading Bar Container - Clean E2B Style */}
+        {/* Loading Bar Container - Clean Blaxel Style */}
         <div
           style={{
             width: "400px",
@@ -213,7 +217,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
             boxShadow: "0 0 20px rgba(0, 102, 255, 0.3)",
           }}
         >
-          {/* Loading Bar - E2B Theme */}
+          {/* Loading Bar - Blaxel Theme */}
           <div
             style={{
               width: `${progress}%`,
@@ -259,7 +263,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           <span style={{ color: "#7D4CDB" }}>LOADING</span> {Math.round(progress)}%
         </div>
 
-        {/* E2B Subtitle - Glitch Effect */}
+        {/* Blaxel Subtitle - Glitch Effect */}
         <div
           style={{
             marginTop: "20px",

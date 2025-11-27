@@ -26,7 +26,7 @@ export const GameUI: React.FC<GameUIProps> = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // E2B Official Brand Theme - Cyber Fleet
+        // Blaxel Official Brand Theme - Cyber Fleet
         background:
           "linear-gradient(135deg, #0A0A1F 0%, #16213e 50%, #0f172a 100%)",
       }}
@@ -46,7 +46,7 @@ export const GameUI: React.FC<GameUIProps> = ({
         {children}
       </div>
 
-      {/* E2B Branding Badge */}
+      {/* Blaxel Branding Badge - Sandbox Preview Glow */}
       <div
         style={{
           position: "absolute",
@@ -54,19 +54,20 @@ export const GameUI: React.FC<GameUIProps> = ({
           right: "20px",
           padding: "8px 16px",
           borderRadius: "8px",
-          backgroundColor: "rgba(10, 10, 31, 0.9)",
-          border: "1px solid #0066FF",
-          boxShadow: "0 0 20px rgba(0, 102, 255, 0.5)",
+          backgroundColor: "rgba(10, 10, 31, 0.95)",
+          border: "1px solid rgba(0, 212, 255, 0.6)",
+          boxShadow: "0 0 20px rgba(0, 212, 255, 0.4), 0 0 40px rgba(0, 102, 255, 0.2), inset 0 0 20px rgba(22, 33, 62, 0.5)",
           fontSize: "12px",
           color: "#00D4FF",
-          textShadow: "0 0 10px #00D4FF",
+          textShadow: "0 0 10px #00D4FF, 0 0 20px rgba(0, 212, 255, 0.5)",
           fontWeight: "600",
           letterSpacing: "0.5px",
           zIndex: 10,
           pointerEvents: "none",
+          background: "linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 31, 0.95))",
         }}
       >
-        ⚡ Powered by E2B
+        ⚡ Powered by Blaxel
       </div>
 
       {/* UI Overlay */}
