@@ -26,7 +26,7 @@ export const GameUI: React.FC<GameUIProps> = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // Blaxel Official Brand Theme - Cyber Fleet
+        // OpenAgent Official Brand Theme - Cyber Fleet
         background:
           "linear-gradient(135deg, #0A0A1F 0%, #16213e 50%, #0f172a 100%)",
       }}
@@ -46,7 +46,7 @@ export const GameUI: React.FC<GameUIProps> = ({
         {children}
       </div>
 
-      {/* Blaxel Branding Badge - Sandbox Preview Glow */}
+      {/* OpenAgent Branding Badge - Sandbox Preview Glow */}
       <div
         style={{
           position: "absolute",
@@ -67,7 +67,7 @@ export const GameUI: React.FC<GameUIProps> = ({
           background: "linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 10, 31, 0.95))",
         }}
       >
-        ⚡ Powered by Blaxel
+        ⚡ Powered by OpenAgent
       </div>
 
       {/* UI Overlay */}

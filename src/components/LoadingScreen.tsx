@@ -99,7 +99,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           justifyContent: "center",
         }}
       >
-        {/* Blaxel Logo and Title - High Contrast */}
+        {/* OpenAgent Logo and Title - High Contrast */}
         <div
           style={{
             display: "flex",
@@ -142,7 +142,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
                 100% { transform: translateY(100vh); }
               }
             `}</style>
-            BLAXEL FLEETJUMP
+            OPENAGENT FLEETJUMP
           </h1>
           <div
             style={{
@@ -161,7 +161,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
             }}
           >
             <span style={{ fontSize: "1.5em", marginRight: "8px" }}>⚡</span>
-            Powered by Blaxel Sandboxes
+            Powered by OpenAgent Sandboxes
           </div>
         </div>
 
@@ -203,7 +203,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           />
         </div>
 
-        {/* Loading Bar Container - Clean Blaxel Style */}
+        {/* Loading Bar Container - Clean OpenAgent Style */}
         <div
           style={{
             width: "400px",
@@ -217,7 +217,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
             boxShadow: "0 0 20px rgba(0, 102, 255, 0.3)",
           }}
         >
-          {/* Loading Bar - Blaxel Theme */}
+          {/* Loading Bar - OpenAgent Theme */}
           <div
             style={{
               width: `${progress}%`,
@@ -263,7 +263,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
           <span style={{ color: "#7D4CDB" }}>LOADING</span> {Math.round(progress)}%
         </div>
 
-        {/* Blaxel Subtitle - Glitch Effect */}
+        {/* OpenAgent Subtitle - Glitch Effect */}
         <div
           style={{
             marginTop: "20px",

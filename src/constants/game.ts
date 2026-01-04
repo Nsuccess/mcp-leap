@@ -27,7 +27,7 @@ export const GAME_CONFIG = {
   GAME_OVER_OFFSET: 50, // Reduced offset for faster game over detection
   SCORE_MULTIPLIER: 10,
 
-  // Visual - Blaxel-Inspired Cyber Fleet Theme
+  // Visual - OpenAgent-Inspired Cyber Fleet Theme
   BRAND_COLORS: {
     DARK: "#0A0A1F",      // Deep space background
     NAVY: "#16213e",      // Fleet depth gradient
@@ -36,9 +36,9 @@ export const GAME_CONFIG = {
     CYAN: "#00D4FF",      // Sandbox preview glow
     CYAN_GLOW: "rgba(0, 212, 255, 0.6)", // Live URL highlight
   },
-  BACKGROUND_COLOR: "#0A0A1F", // Blaxel Dark
-  PLATFORM_COLOR: "#0066FF", // Blaxel Blue
-  FALLBACK_PLAYER_COLOR: "#00D4FF", // Blaxel Cyan
+  BACKGROUND_COLOR: "#0A0A1F", // OpenAgent Dark
+  PLATFORM_COLOR: "#0066FF", // OpenAgent Blue
+  FALLBACK_PLAYER_COLOR: "#00D4FF", // OpenAgent Cyan
 
   // Animation (keeping for future use if needed)
   GRADIENT_ANIMATION_SPEED: 0.0008,

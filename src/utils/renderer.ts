@@ -13,25 +13,25 @@ export class Renderer {
     const canvasWidth = this.ctx.canvas.width;
     const canvasHeight = this.ctx.canvas.height;
 
-    // Create Blaxel cyber space gradient background
+    // Create OpenAgent cyber space gradient background
     const gradient = this.ctx.createLinearGradient(0, 0, 0, canvasHeight);
 
-    // Blaxel Official Brand Colors - Cyber Fleet Theme
+    // OpenAgent Official Brand Colors - Cyber Fleet Theme
     const colors = [
       GAME_CONFIG.BRAND_COLORS.DARK,    // Deep space
       GAME_CONFIG.BRAND_COLORS.NAVY,    // Navy blue
-      GAME_CONFIG.BRAND_COLORS.BLUE,    // Blaxel Blue
-      GAME_CONFIG.BRAND_COLORS.PURPLE,  // Blaxel Purple
-      GAME_CONFIG.BRAND_COLORS.CYAN,    // Blaxel Cyan glow
+      GAME_CONFIG.BRAND_COLORS.BLUE,    // OpenAgent Blue
+      GAME_CONFIG.BRAND_COLORS.PURPLE,  // OpenAgent Purple
+      GAME_CONFIG.BRAND_COLORS.CYAN,    // OpenAgent Cyan glow
     ];
 
-    // Create smooth Blaxel gradient
+    // Create smooth OpenAgent gradient
     for (let i = 0; i < colors.length; i++) {
       const position = i / (colors.length - 1);
       gradient.addColorStop(position, colors[i]);
     }
 
-    // Apply Blaxel gradient background
+    // Apply OpenAgent gradient background
     this.ctx.fillStyle = gradient;
     this.ctx.fillRect(0, 0, canvasWidth, canvasHeight);
   }
@@ -68,13 +68,13 @@ export class Renderer {
     this.drawRoundedRect(x + 3, y + 3, width, height, 8);
     this.ctx.fill();
 
-    // Create Blaxel electric gradient for platform
+    // Create OpenAgent electric gradient for platform
     const gradient = this.ctx.createLinearGradient(x, y, x, y + height);
-    gradient.addColorStop(0, "#0066FF"); // Blaxel Blue top
-    gradient.addColorStop(0.5, "#7D4CDB"); // Blaxel Purple middle
-    gradient.addColorStop(1, "#0A0A1F"); // Blaxel Dark bottom
+    gradient.addColorStop(0, "#0066FF"); // OpenAgent Blue top
+    gradient.addColorStop(0.5, "#7D4CDB"); // OpenAgent Purple middle
+    gradient.addColorStop(1, "#0A0A1F"); // OpenAgent Dark bottom
 
-    // Draw main platform with Blaxel gradient
+    // Draw main platform with OpenAgent gradient
     this.ctx.fillStyle = gradient;
     this.drawRoundedRect(x, y, width, height, 8);
     this.ctx.fill();
@@ -84,13 +84,13 @@ export class Renderer {
     this.drawRoundedRect(x, y, width, height * 0.3, 8);
     this.ctx.fill();
 
-    // Add Blaxel cyan border glow
+    // Add OpenAgent cyan border glow
     this.ctx.strokeStyle = "rgba(0, 212, 255, 0.6)";
     this.ctx.lineWidth = 2;
     this.drawRoundedRect(x + 1, y + 1, width - 2, height - 2, 7);
     this.ctx.stroke();
 
-    // Add Blaxel tech dots
+    // Add OpenAgent tech dots
     this.ctx.fillStyle = "rgba(0, 212, 255, 0.8)";
     const dotSpacing = 12;
     const dotsPerRow = Math.floor(width / dotSpacing);
